@@ -10,19 +10,19 @@ namespace Projekt
     {
         public string Jmeno { get;  set; }
         public string Prijmeni { get;  set; }
-        public int Cislo { get;  set; }
+        public int TelCislo { get;  set; }
         public int Vek { get;  set; }
 
-        public Klient(string jmeno, string prijmeni, int cislo, int vek)
+        public Klient(string jmeno, string prijmeni, int telcislo, int vek)
         { 
             this.Jmeno = jmeno;
             this.Prijmeni = prijmeni;
-            this.Cislo = cislo;
+            this.TelCislo = telcislo;
             this.Vek = vek;
         }
         public override string ToString()
         {
-            return Jmeno + " " + Prijmeni + "," + " telefon: " + Cislo + "," + " věk: " + Vek;
+            return Jmeno + " " + Prijmeni + "," + " telefon: " + TelCislo + "," + " věk: " + Vek;
         }
     }
 }

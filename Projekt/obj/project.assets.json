@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rostik\\Desktop\\Studium\\Projekt\\Projekt\\Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\rostik\\Desktop\\Studium\\projekt\\Projekt\\Projekt.csproj",
       "projectName": "Projekt",
-      "projectPath": "C:\\Users\\rostik\\Desktop\\Studium\\Projekt\\Projekt\\Projekt.csproj",
+      "projectPath": "C:\\Users\\rostik\\Desktop\\Studium\\projekt\\Projekt\\Projekt.csproj",
       "packagesPath": "C:\\Users\\rostik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rostik\\Desktop\\Studium\\Projekt\\Projekt\\obj\\",
+      "outputPath": "C:\\Users\\rostik\\Desktop\\Studium\\projekt\\Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rostik\\AppData\\Roaming\\NuGet\\NuGet.Config",
