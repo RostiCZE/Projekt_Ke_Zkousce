@@ -15,11 +15,10 @@ namespace Projekt
 
             // Inicializace instancí 
             Menu menu = new Menu();
-            // Registrace eventů
-            menu.pojistovna.Pokracovani += menu.Pokracuj;
 
             // Základní Výpis Menu
             menu.VypisMenu();
+            menu.Konec();
         }
 
     }

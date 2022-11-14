@@ -4,19 +4,24 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Projekt
 {
     internal class Menu
     {
-        public char volba { get; set; }
+        private char volba { get; set; }
 
-        public Pojistovna pojistovna;
+        private Pojistovna pojistovna;
+
 
         private bool prvnispusteni = true;
         public Menu()
         {
             pojistovna = new Pojistovna();
+
+            // Registrace eventu
+            pojistovna.Pokracovani += Pokracuj;
         }
         public void VypisMenu()
         {
@@ -35,8 +40,8 @@ namespace Projekt
                 char volba = ZvolVolbu();
             }
             // Načtení uživatelské volby z menu a reakce
-            bool Pokracuj = true;
-            while (Pokracuj == true)
+            bool pokracuj = true;
+            while (pokracuj == true)
             {
                 switch (volba)
                 {
@@ -53,12 +58,12 @@ namespace Projekt
                         break;
 
                     case '4':
-                        Konec();
-                        Pokracuj = false;
+                        pokracuj = false;
                         break;
 
                     default:
                         Default();
+                        volba = ZvolVolbu();
                         break;
                 }
             }
@@ -92,7 +97,6 @@ namespace Projekt
            ZvolVolbu();
            VypisMenu();
         }
-
         public void Konec()
         {
             Console.WriteLine("\nDěkuji za použití aplikace, nyní proběhne její vypnutí.");
