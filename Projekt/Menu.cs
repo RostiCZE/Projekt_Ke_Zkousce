@@ -62,8 +62,7 @@ namespace Projekt
                         break;
 
                     default:
-                        Default();
-                        volba = ZvolVolbu();
+                        Pokracuj();
                         break;
                 }
             }
@@ -92,7 +91,13 @@ namespace Projekt
         }
         public void Pokracuj()
         {
-           Console.WriteLine("\nPokračujte stiskem volby");
+            if (new [] { '1', '2', '3' }.Contains(volba))
+            {
+                Console.WriteLine("\nPokračujte stiskem volby");
+            } else
+            {
+                Console.WriteLine("Neplatná Volba, zvol si prosím znovu");
+            }
            prvnispusteni = false;
            ZvolVolbu();
            VypisMenu();
@@ -101,10 +106,6 @@ namespace Projekt
         {
             Console.WriteLine("\nDěkuji za použití aplikace, nyní proběhne její vypnutí.");
             Console.WriteLine("Autor : Rostislav Danko");
-        }
-        public void Default()
-        {
-            Console.WriteLine("Neplatná Volba, zvol si prosím znovu");
         }
     }
 }

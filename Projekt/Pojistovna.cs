@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -89,12 +90,9 @@ namespace Projekt
             }
 
             // Vyhledání klienta
-            Klient vysledek = databaze.NajdiSeznam().Find(
-                delegate (Klient kl)
-                {
-                    return kl.Jmeno.ToLower() == JmenoHledat.ToLower() && kl.Prijmeni.ToLower() == PrijmeniHledat.ToLower();
-                }
-                );
+            Klient vysledek = (from X in databaze.NajdiSeznam()
+                               where (X.Jmeno.ToLower() == JmenoHledat.ToLower() && X.Prijmeni.ToLower() == PrijmeniHledat.ToLower())
+                               select X).FirstOrDefault();
             if (vysledek != null)
             {
                 Console.WriteLine("\n" + vysledek);

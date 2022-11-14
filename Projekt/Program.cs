@@ -16,7 +16,7 @@ namespace Projekt
             // Inicializace instancí 
             Menu menu = new Menu();
 
-            // Základní Výpis Menu
+            // Základní Výpis Menu.
             menu.VypisMenu();
             menu.Konec();
         }
