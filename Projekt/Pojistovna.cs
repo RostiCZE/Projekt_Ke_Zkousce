@@ -23,29 +23,29 @@ namespace Projekt
         {
             // Načtení dat pro tvorbu instance klienta
 
-            Console.WriteLine("\nZadejte jméno klienta:");
+            Console.WriteLine("\nType clients name:");
             string Jmeno = "";
             while (string.IsNullOrEmpty(Jmeno))
             {
                 Jmeno = Console.ReadLine().Trim();
             }
 
-            Console.WriteLine("Zadejte příjmení klienta:");
+            Console.WriteLine("Type clients last name:");
             string Prijmeni = "";
             while (string.IsNullOrEmpty(Prijmeni))
             {
                 Prijmeni = Console.ReadLine().Trim();
             }
 
-            Console.WriteLine("Zadejte telefonní číslo klienta:");
+            Console.WriteLine("Type clients phone number:");
             int TelCislo;
             while (!int.TryParse(Console.ReadLine(), out TelCislo))
-                Console.WriteLine("Neplatné číslo, zadejte prosím znovu:");
+                Console.WriteLine("Invalid number, please type it again:");
 
-            Console.WriteLine("Zadejte věk klienta:");
+            Console.WriteLine("Type clients age:");
             int Vek;
             while (!int.TryParse(Console.ReadLine(), out Vek))
-                Console.WriteLine("Neplatné číslo, zadejte prosím znovu:");
+                Console.WriteLine("Invalid number, please type it again:");
             
             // Tvorba instance a její přidání do databáze
             
@@ -53,7 +53,7 @@ namespace Projekt
 
             // Výpis tvořené instance
 
-            Console.WriteLine("\nByl vytvořen klient {0} {1}, kterému je {2} let a jeho telefonní číslo je {3}.", Jmeno, Prijmeni, Vek, TelCislo);
+            Console.WriteLine("\nClient {0} {1} was created, the client is {2} years old and clients phone number is {3}.", Jmeno, Prijmeni, Vek, TelCislo);
 
             OnPokracovani();
         }
@@ -63,7 +63,7 @@ namespace Projekt
         }
         public void VypisKlienta()
         {
-            Console.WriteLine("\nVýpis všech klientů:");
+            Console.WriteLine("\nAll clients:");
             foreach (Klient i in databaze.NajdiSeznam())
             {
                 Console.WriteLine(i);
@@ -75,14 +75,14 @@ namespace Projekt
         {
             // Načtení dat od uživatele pro hledání klienta
 
-            Console.WriteLine("\nZadejte jméno klienta:");
+            Console.WriteLine("\nType clients name:");
             string JmenoHledat = "";
             while (string.IsNullOrEmpty(JmenoHledat))
             {
                 JmenoHledat = Console.ReadLine().Trim();
             }
 
-            Console.WriteLine("Zadejte příjmení klienta:");
+            Console.WriteLine("Type clients last name:");
             string PrijmeniHledat = "";
             while (string.IsNullOrEmpty(PrijmeniHledat))
             {
@@ -100,7 +100,7 @@ namespace Projekt
             }
             else
             {
-                Console.WriteLine("\nKlient {0} neexistuje.", JmenoHledat);
+                Console.WriteLine("\nClient {0} doesnt exist.", JmenoHledat);
             }
 
             OnPokracovani();

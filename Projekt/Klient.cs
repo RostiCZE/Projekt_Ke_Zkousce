@@ -22,7 +22,7 @@ namespace Projekt
         }
         public override string ToString()
         {
-            return Jmeno + " " + Prijmeni + "," + " telefon: " + TelCislo + "," + " věk: " + Vek;
+            return Jmeno + " " + Prijmeni + "," + " phone: " + TelCislo + "," + " age: " + Vek;
         }
     }
 }

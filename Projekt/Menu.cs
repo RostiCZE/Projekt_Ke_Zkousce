@@ -27,13 +27,13 @@ namespace Projekt
         {
             Console.Clear();
             Console.WriteLine("---------------------------");
-            Console.WriteLine("Evidence pojištěných");
+            Console.WriteLine("Records of the insured");
             Console.WriteLine("---------------------------");
-            Console.WriteLine("\nVyberte si akci:");
-            Console.WriteLine("1 - Přidat nového klienta");
-            Console.WriteLine("2 - Vypsat všechny klienty");
-            Console.WriteLine("3 - Vyhledat klienta");
-            Console.WriteLine("4 - Ukončit aplikaci");
+            Console.WriteLine("\nChoose your action:");
+            Console.WriteLine("1 - Add new client");
+            Console.WriteLine("2 - Show all clients");
+            Console.WriteLine("3 - Find client");
+            Console.WriteLine("4 - Exit app");
 
             if (prvnispusteni == true)
             {
@@ -93,10 +93,10 @@ namespace Projekt
         {
             if (new [] { '1', '2', '3' }.Contains(volba))
             {
-                Console.WriteLine("\nPokračujte stiskem volby");
+                Console.WriteLine("\nContinue by choosing your action");
             } else
             {
-                Console.WriteLine("Neplatná Volba, zvol si prosím znovu");
+                Console.WriteLine("Invalid action, choose again please");
             }
            prvnispusteni = false;
            ZvolVolbu();
@@ -104,8 +104,8 @@ namespace Projekt
         }
         public void Konec()
         {
-            Console.WriteLine("\nDěkuji za použití aplikace, nyní proběhne její vypnutí.");
-            Console.WriteLine("Autor : Rostislav Danko");
+            Console.WriteLine("\nThank you for choosing my app. Exiting now...");
+            Console.WriteLine("Author : Rostislav Danko");
         }
     }
 }
